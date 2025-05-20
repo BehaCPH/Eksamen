@@ -1,0 +1,441 @@
+/* RESET & BASE STYLES */
+:root {
+  --background-color:var(red)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color:white;
+}
+
+/* HEADER NAVBAR */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #9c7581;
+  padding: 10px 20px;
+  position: relative;
+}
+
+/* LOGO */
+.logo img {
+  height: 65px;
+}
+
+/* NAV LINKS */
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  transition: background 0.2s ease;
+}
+
+/*If you want the box to highlight*/
+
+/*.navbar a:hover {
+  background-color: #b88da0;
+  border-radius: 5px;
+}*/
+
+.cupcake-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cupcake {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  transition: transform 0.2s ease;
+}
+
+.cupcake img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+/* Text inside the muffin */
+.cupcake-text {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+/* 👇 Image swap on hover using pseudo-element trick */
+.cupcake-link:hover img {
+  content: url('img/cupfilled.png');
+  transition: content 0.3s ease-in-out;
+}
+
+.cupcake-link:hover .cupcake-text {
+  color: white;
+}
+
+/* HAMBURGER BUTTON */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/*--------------------------------------------------------Begynder side til hjemmeside--------------------------------------------------------------*/
+
+.begynder1{
+  display: flex;
+  margin: 50px;
+  flex-direction: column;
+}
+
+.begynder_overskrift{
+  margin: 20px;
+  text-align: center;
+}
+
+.begynder_intro{
+  background-color: #9c7581;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  font-size: xx-large;
+  color: white;
+  
+}
+
+.tip-over{
+  text-align: center;
+}
+
+.tips{
+  background-color: #9c7581;
+  padding: 10%;
+  margin: 8%;
+  width: 90%;
+  height: auto;
+  box-sizing: border-box;
+  border-radius: 20px;
+  font-size: 45px;
+  color: white;
+  justify-self: center;
+}
+
+.ord-over{
+  text-align: center;
+}
+
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 10px 20px;
+  background-color: #9c7581;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px;
+}
+
+.item {
+  background-color: #f6dadb;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.section1{
+  display: flex;
+  flex-direction: column;
+  gap: 60%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  justify-content: center;
+}
+
+.section2{
+  display: flex;
+  flex-direction: column;
+  gap: 50%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  justify-content: center;
+}
+
+.ælte{
+border-radius: 15px;
+box-sizing: border-box;
+background-color:#FADADD ;
+padding: 5%;
+}
+
+.begynder_hjælp{
+  margin: 5%;
+  text-align: center;
+}
+
+
+.grid-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1px;
+  margin-top: 40px;
+  background-color: #ccc;
+  border: 1px solid #aaa;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.grid-table div {
+  padding: 10px;
+  background-color: white;
+  font-size: 14px;
+  line-height: 1.4;
+
+}
+
+.grid-table .header {
+  background-color: #f6dadb;
+  font-weight: bold;
+  text-align: center;
+}
+
+.grid-table .problem {
+  color: darkred;
+  font-weight: bold;
+}
+
+.grid-table .solution {
+  color: darkgreen;
+  font-weight: bold;
+}
+
+.flere-prob{
+  text-align: center;
+  font-size: x-large;
+  margin-top: 20px;
+}
+
+
+
+.term-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px 20px;
+  background-color: #a47c83;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.term-box {
+  background-color: #f6dadb;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.term-box.expanded {
+  background-color: #fbecec;
+  padding-bottom: 40px;
+}
+
+.term-info {
+  margin-top: 10px;
+  font-weight: normal;
+  font-size: 13px;
+  color: #4a4a4a;
+  display: none;
+}
+
+.term-box.expanded .term-info {
+  display: block;
+}
+
+/*-------------------------------------------------------------------Om os side--------------------------------------------------------------------------------*/
+
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 40px;
+  align-items: center;
+}
+
+.intro .text {
+  max-width: 500px;
+}
+
+.intro .logo img {
+  max-width: 200px;
+  height: auto;
+}
+
+.team {
+  padding: 40px;
+}
+
+.team .member {
+  display: flex;
+  background-color: #a47c83;
+  color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.team .member.reverse {
+  flex-direction: row-reverse;
+}
+
+.text-box {
+  flex: 1;
+  padding: 20px;
+  background-color: #fce9eb;
+  color: #3b3b3b;
+}
+
+.text-box h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.tags {
+  margin: 10px 0;
+}
+
+.tags span {
+  background-color: #ccc;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.socials {
+  margin-top: 10px;
+}
+
+.socials span {
+  display: inline-block;
+  background-color: white;
+  color: #333;
+  border-radius: 50%;
+  padding: 5px 10px;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.member img {
+  width: 200px;
+  object-fit: cover;
+}
+
+
+
+
+/*--------------------------------------------------------Event side---------------------------------------------------------------------------------*/
+
+
+.intro-event {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 40px;
+  align-items: center;
+}
+
+.intro-event .text-event {
+  max-width: 500px;
+  font-size: x-large;
+}
+
+.intro-event .logo img {
+  max-width: 400px;
+  height: auto;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay-img img{
+  position: absolute;
+  width: 20%;
+  top: 105%; 
+  left: 65%; 
+}
+
+.overlay-text{
+  position: absolute;
+  top: 125%; 
+  left: 30%; 
+  width: 40%;
+  transform: translate(-50%, -50%);  
+  color: black; 
+  padding: 10px 20px; 
+  font-size: 55px; 
+  text-align: center;
+  text-align: left;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #9c7581;
+    display: none;
+    padding: 10px 0;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
