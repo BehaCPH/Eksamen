@@ -12,6 +12,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color:white;
+    overflow-x: hidden;
 }
 
 /* HEADER NAVBAR */
@@ -284,20 +285,30 @@ padding: 5%;
 
 .intro {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-evenly;
   padding: 40px;
   align-items: center;
 }
 
 .intro .text {
-  max-width: 500px;
+  max-width: 900px;
+}
+
+.intro p{
+  font-size: 2rem;
+}
+
+.intro h2{
+  font-size: 3rem;
 }
 
 .intro .logo img {
-  max-width: 200px;
+  max-width: 500px;
   height: auto;
 }
+
+/*---intro og billede intro til om os slutter her---*/
 
 .team {
   padding: 40px;
@@ -314,6 +325,11 @@ padding: 5%;
 
 .team .member.reverse {
   flex-direction: row-reverse;
+}
+
+.member {
+  gap: 2%;
+  padding: 1%;
 }
 
 .text-box {
@@ -355,11 +371,50 @@ padding: 5%;
 }
 
 .member img {
-  width: 200px;
+  width: 40%;
+  height: auto;
   object-fit: cover;
 }
 
+.member p{
+  font-size: 2rem;
 
+}
+
+.member h3{
+  font-size: 3rem;
+
+}
+
+.kontakt-os {
+  display: flex;
+  background-color: #a47c83;
+  color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  gap: 2%;
+  padding: 1%;
+}
+
+.kontakt-content{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #FADADD;
+  width: 100%;
+  justify-content: center;
+  gap: 40rem;
+}
+
+.kontakt-os p{
+  font-size: 1.5rem;
+  color: #333;
+  padding: 1rem;
+}
+
+.kontakt-os img{
+  width: 20rem;
+}
 
 
 /*--------------------------------------------------------Event side---------------------------------------------------------------------------------*/
@@ -367,51 +422,88 @@ padding: 5%;
 
 .intro-event {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  margin-left: 20%;
   padding: 40px;
   align-items: center;
+  gap: 4rem;
 }
 
 .intro-event .text-event {
-  max-width: 500px;
-  font-size: x-large;
+  max-width: 600px;
+  font-size: xx-large;
 }
 
-.intro-event .logo img {
-  max-width: 400px;
-  height: auto;
+.intro-event img {
+width: 200%;
 }
 
-.image-container {
-  position: relative;
-  display: inline-block;
-}
-
-.image-container img {
-  display: block;
+.papir-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+}
+
+/* Paper + tapes */
+.papir-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 90%;
+}
+
+.papir-bg {
+  width: 100%;
+  display: block;
+}
+
+.tape {
+  position: absolute;
+  width: clamp(80px, 20vw, 250px); /* Scales between 80px and 250px */
   height: auto;
 }
 
-.overlay-img img{
-  position: absolute;
-  width: 20%;
-  top: 105%; 
-  left: 65%; 
+.tape-top-right {
+  top: -6%;
+  right: -6%;
 }
 
-.overlay-text{
+.tape-bottom-left {
+  bottom: -3%;
+  left: -6%;
+}
+
+/* Content layout */
+.papir-block {
   position: absolute;
-  top: 125%; 
-  left: 30%; 
-  width: 40%;
-  transform: translate(-50%, -50%);  
-  color: black; 
-  padding: 10px 20px; 
-  font-size: 55px; 
-  text-align: center;
-  text-align: left;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap; /* allows stacking on smaller screens */
+  align-items: center;
+  justify-content: space-between;
+  padding: 4vw; /* responsive padding */
+  width: 100%;
+  height: 100%;
+  color: #4B2B1B;
+  gap: 2rem; /* adds spacing between items */
+}
+
+
+/* Left text */
+.text-content {
+  flex: 1 1 300px;
+  min-width: 250px;
+}
+
+.text-content h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem); /* scales between 1.5rem and 2.5rem */
+  margin-bottom: 1rem;
+}
+
+.text-content p {
+  font-size: clamp(1rem, 2vw, 1.2rem); /* responsive paragraph size */
+  margin-bottom: 1rem;
+  line-height: 1.5;
 }
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -419,7 +511,125 @@ padding: 5%;
 
 
 /* RESPONSIVE STYLES */
-@media (max-width: 768px) {
+
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #9c7581;
+    display: none;
+    padding: 10px 0;
+  }
+
+body {overflow-x: hidden;}
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+.intro-event {
+  display: flex; 
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 100%;
+  gap: 50px;
+  margin-left: 0%;
+  height: auto;
+}
+
+.intro-event h2{
+  font-size: 1.5rem;
+}
+
+.intro-event p{
+  font-size: 2rem;
+}
+
+
+.intro-event img{
+  height: 40%;
+}
+
+  .top-section,
+  .bottom-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ingredients-list {
+    justify-content: center;
+  }
+
+  .ingredients-title {
+    text-align: center;
+    padding: 0;
+  }
+
+  .papir-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: nowrap;
+    gap: 20%;
+  }
+
+.image-content img{
+  display: block;
+  width: 75%;
+}
+
+.image-content{
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+gap: 15%;
+
+}
+  .text-content {
+    flex: 1 1
+  }
+
+  .text-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .text-content p {
+    font-size: 0.9rem;
+  }
+
+  .tape {
+    width: 120px;
+  }
+
+  .tape-top-right {
+    top: -1%;
+    right: -4%;
+}
+
+  .tape-bottom-left {
+    bottom: -1%;
+    left: -4%;
+}
+
+
+/*omos*/
+
+}
+
+
+
+
+
+
+@media (max-width: 970px) {
   .navbar {
     flex-direction: column;
     position: absolute;
@@ -438,4 +648,89 @@ padding: 5%;
   .menu-toggle {
     display: block;
   }
+
+.intro-event {
+  display: flex; 
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 100%;
+  gap: 50px;
+  height: auto;
+}
+
+.intro-event h2{
+  font-size: 1.5rem;
+}
+
+.intro-event p{
+  font-size: 1rem;
+}
+
+
+.intro-event img{
+  height: 40%;
+}
+
+  .top-section,
+  .bottom-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ingredients-list {
+    justify-content: center;
+  }
+
+  .ingredients-title {
+    text-align: center;
+    padding: 0;
+  }
+
+  .papir-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: nowrap;
+  }
+
+.image-content img{
+  display: none;
+}
+
+.image-content{
+display: flex;
+flex-wrap: nowrap;
+flex-direction: row;
+
+}
+  .text-content {
+    flex: 1 1
+  }
+
+  .text-content h2 {
+    font-size: 1rem;
+  }
+
+  .text-content p {
+    font-size: 0.6rem;
+  }
+
+  .tape {
+    width: 120px;
+  }
+
+  .tape-top-right {
+    top: -15%;
+    right: -10%;
+}
+
+  .tape-bottom-left {
+    bottom: -15%;
+    left: -10%;
+}
+
+
+/*omos*/
+
 }
