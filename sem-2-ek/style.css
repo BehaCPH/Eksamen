@@ -1,0 +1,623 @@
+/* RESET & BASE STYLES */
+:root {
+  --background-color:var(red)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* HEADER NAVBAR */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #9c7581;
+  padding: 10px 20px;
+  position: relative;
+}
+
+/* LOGO */
+.logo img {
+  height: 65px;
+}
+
+/* NAV LINKS */
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px 0px 12px;
+  transition: background 0.2s ease;
+}
+
+/*If you want the box to highlight*/
+
+/*.navbar a:hover {
+  background-color: #b88da0;
+  border-radius: 5px;
+}*/
+
+.cupcake-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cupcake {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  transition: transform 0.2s ease;
+}
+
+.cupcake img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+/* Text inside the muffin */
+.cupcake-text {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+/* 👇 Image swap on hover using pseudo-element trick */
+.cupcake-link:hover img {
+  content: url('img/cupfilled.png');
+  transition: content 0.3s ease-in-out;
+}
+
+.cupcake-link:hover .cupcake-text {
+  color: white;
+}
+
+/* HAMBURGER BUTTON */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.fr-container{
+  margin: 50px 50px 0px 50px;
+  display: flex;
+  gap: 10%;
+}
+
+.fr-text{
+  flex: 1;
+  line-height: auto;
+}
+.fr-text h1{
+  font-size:2.6vw;
+}
+.fr-text p{
+  font-size: 2.5vw;
+}
+
+.fr-image{
+  width: 35%;
+  image-rendering: auto;
+  border: 20px;
+}
+
+.fr-image img{
+  width: 100%;
+  height: auto;
+}
+
+.fr-centertext{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fr-centertext img{
+  transform: rotate(-25deg);
+  width: 100px;
+}
+
+.carousel-container {
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative; /* eller bare fjern denne linje helt */
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.caro-card {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  padding: 3.2vw;
+  height: auto;
+  align-items: center;
+}
+
+.caro-card-inner {
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.caro-card img {
+  width: 100%;
+  height: auto;
+}
+    
+
+.caro-button {
+  background-color: #fce4ec;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.arrow-left {
+  left: 10px;
+  background-color: white;
+}
+
+.arrow-right {
+  right: 10px;
+  background-color: white;
+}
+
+.papir-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Paper + tapes */
+.papir-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 90%;
+}
+
+.papir-bg {
+  width: 100%;
+  display: block;
+}
+
+.tape {
+  position: absolute;
+  width: clamp(80px, 20vw, 250px); /* Scales between 80px and 250px */
+  height: auto;
+}
+
+.tape-top-right {
+  top: -6%;
+  right: -6%;
+}
+
+.tape-bottom-left {
+  bottom: -3%;
+  left: -6%;
+}
+
+/* Content layout */
+.papir-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap; /* allows stacking on smaller screens */
+  align-items: center;
+  justify-content: space-between;
+  padding: 4vw; /* responsive padding */
+  width: 100%;
+  height: 100%;
+  color: #4B2B1B;
+  gap: 2rem; /* adds spacing between items */
+}
+
+
+/* Left text */
+.text-content {
+  flex: 1 1 300px;
+  min-width: 250px;
+}
+
+.text-content h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem); /* scales between 1.5rem and 2.5rem */
+  margin-bottom: 1rem;
+}
+
+.text-content p {
+  font-size: clamp(1rem, 2vw, 1.2rem); /* responsive paragraph size */
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Right image and buttons */
+.image-content {
+  flex: 1 1 300px;
+  text-align: center;
+  max-width: 100%;
+}
+
+.image-content img {
+  width: 100%;
+  max-width: 500px; /* limits size on large screens */
+  height: auto;
+  border-radius: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  text-decoration: none;
+  color: #4B2B1B;
+  font-weight: bold;
+  border-bottom: 2px solid #4B2B1B;
+}
+
+/* ========== Begynder ========== */
+
+
+
+
+
+
+
+/* ========== Opskifter ========== */
+.title{
+  display: flex;
+  justify-content: center;
+  margin: 30px 0px 0px 0px;
+  font-size: 30px;
+
+}
+/* ========== FILTER TAG BUTTONS ========== */
+.tag-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px auto 20px;
+
+}
+
+.tag-button {
+  background-color: #d9a39a;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.tag-button.active {
+  background-color: #a2695f;
+}
+
+
+/* ========== RECIPE CARDS ========== */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px 50px;
+}
+
+.card {
+  width: 280px; /* consistent fixed size */
+  flex: 0 0 auto; /* don't grow or shrink */
+}
+
+
+.card {
+  background-color: #5e352d;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.card h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.tags span {
+  background-color: #d9a39a;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+/* Recipe description */
+.card p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Button inside card */
+.card button {
+  background-color: #f5c4be;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: 0.2s;
+}
+
+.card button a{
+  text-decoration: none;
+  color: #5e352d;
+}
+
+.card button:hover {
+  background-color: #e6a59a;
+}
+
+/* Container layout ----------------------------------------*/
+.main-container {
+  background-color: #e6a59a;
+  font-family: 'Kalam', cursive;
+  padding: 20px;
+  margin: 40px;
+}
+
+/* Top layout: text left, image right */
+.top-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Text box on the left */
+.text-box {
+  background-color: #b97c5d;
+  color: white;
+  border-radius: 15px;
+  padding: 20px;
+  flex: 1 1 300px;
+}
+
+.text-box h1 {
+  margin: 0 0 10px;
+  font-size: 2rem;
+}
+
+/* Image box on the right */
+.image-box {
+  flex: 1 1 300px;
+}
+
+.image-box img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Bottom layout: title left, ingredients right */
+.bottom-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+.ingredients-title {
+  flex: 1 1 200px;
+  padding-left: 10px;
+}
+
+.ingredients-title h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.ingredients-list {
+  flex: 1 1 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.ingredient {
+  width: 70px;
+  text-align: center;
+}
+
+.ingredient img {
+  width: 50px;
+  height: auto;
+}
+
+.steps-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  background-color: white; /* Light pink background */
+  border-radius: 15px;
+  width: auto;
+  padding: 20px;
+}
+
+.steps-text {
+  flex: 1;
+  background-color: #b97c5d; /* Brown */
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  font-size: auto;
+  height: 30vh;
+}
+
+.steps-image img {
+  width: auto;
+  border-radius: 10px;
+}
+
+
+/*-----------------Om os--------------------*/
+
+
+
+
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #9c7581;
+    display: none;
+    padding: 10px 0;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+
+
+  .top-section,
+  .bottom-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ingredients-list {
+    justify-content: center;
+  }
+
+  .ingredients-title {
+    text-align: center;
+    padding: 0;
+  }
+
+
+
+
+
+
+  .papir-block {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .text-content {
+    flex: 1 1 100%;
+  }
+
+  .text-content h2 {
+    font-size: 1rem;
+  }
+
+  .text-content p {
+    font-size: 0.5rem;
+  }
+
+  .image-content {
+    display: none; /* Hide image + buttons on mobile */
+  }
+
+  .tape {
+    width: 120px;
+  }
+
+  .tape-top-right {
+    top: -6%;
+    right: -6%;
+}
+
+  .tape-bottom-left {
+    bottom: -3%;
+    left: -6%;
+}
+
+
+/*omos*/
+
+}
+
+
+

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<!--Total Navbar-->
+  <header class="header">
+    <a href="index.html" class="logo">
+      <img src="img/logo.png" alt="Logo" height="40" />
+    </a>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+<nav class="navbar" id="navLinks">
+  <a href="begynder.html" class="cupcake-link">
+    <div class="cupcake">
+      <img src="img/Cupnotfilled.png" alt="Cupcake" />
+      <span class="cupcake-text">Begynder</span>
+    </div>
+  </a>
+  <a href="#" class="cupcake-link">
+    <div class="cupcake">
+      <img src="img/Cupnotfilled.png" alt="Cupcake" />
+      <span class="cupcake-text">Opskrifter</span>
+    </div>
+  </a>
+  <a href="#" class="cupcake-link">
+    <div class="cupcake">
+      <img src="img/Cupnotfilled.png" alt="Cupcake" />
+      <span class="cupcake-text">Event</span>
+    </div>
+  </a>
+  <a href="#" class="cupcake-link">
+    <div class="cupcake">
+      <img src="img/Cupnotfilled.png" alt="Cupcake" />
+      <span class="cupcake-text">Om os</span>
+    </div>
+  </a>
+</nav>
+  </header>
+
+<div class="title">Opskifter</div>
+
+<!-- Sorting Filter Section -->
+<div class="tag-buttons">
+  <button class="tag-button" data-tag="Populær">Populær</button>
+  <button class="tag-button" data-tag="Nem">Nem</button>
+  <button class="tag-button" data-tag="Få ingredienser">Få ingredienser</button>
+  <button class="tag-button" data-tag="Tidskrævende">Tidskrævende</button>
+  <button class="tag-button" data-tag="Budget">Budget</button>
+</div>
+
+<!-- Recipe Cards Section -->
+<div class="content">
+  <div class="card" data-tags="Populær,Nem,Få ingredienser">
+    <h1>Bananmuffins</h1>
+    <img src="https://images.unsplash.com/photo-1601050690597-7a4f66c70d6c" alt="Bananmuffins">
+    <div class="tags">
+      <span>Populær</span>
+      <span>Nem</span>
+      <span>Få ingredienser</span>
+    </div>
+    <p>Disse bananmuffins er nemme at bage og smager skønt. De er luftige, saftige og perfekte som en lækker snack.</p>
+    <button><a href="bananmuffins.html">Se Opskriften</a></button>
+  </div>
+
+  <div class="card" data-tags="Populær,Nem,Tidskrævende">
+    <h1>Cookies</h1>
+    <img src="https://images.unsplash.com/photo-1601050690597-7a4f66c70d6c" alt="Cookies">
+    <div class="tags">
+      <span>Populær</span>
+      <span>Nem</span>
+      <span>Tidskrævende</span>
+    </div>
+    <p>Disse cookies er nemme og lækre med sprød kant og blød midte.</p>
+    <button>Se Opskriften</button>
+  </div>
+
+  <div class="card" data-tags="Budget,Nem,Få ingredienser">
+    <h1>Kartoffelsuppe</h1>
+    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Kartoffelsuppe">
+    <div class="tags">
+      <span>Budget</span>
+      <span>Nem</span>
+      <span>Få ingredienser</span>
+    </div>
+    <p>Varm og cremet suppe perfekt til kolde dage og et stramt budget.</p>
+    <button>Se Opskriften</button>
+  </div>
+
+  <div class="card" data-tags="Populær,Tidskrævende">
+    <h1>Lasagne</h1>
+    <img src="https://images.unsplash.com/photo-1589308078055-ebd6f1fbd7c8" alt="Lasagne">
+    <div class="tags">
+      <span>Populær</span>
+      <span>Tidskrævende</span>
+    </div>
+    <p>En klassisk lasagne, der tager tid, men smager fantastisk.</p>
+    <button>Se Opskriften</button>
+  </div>
+    <div class="card" data-tags="Budget,Nem,Få ingredienser">
+    <h1>Kartoffelsuppe</h1>
+    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Kartoffelsuppe">
+    <div class="tags">
+      <span>Budget</span>
+      <span>Nem</span>
+      <span>Få ingredienser</span>
+    </div>
+    <p>Varm og cremet suppe perfekt til kolde dage og et stramt budget.</p>
+    <button>Se Opskriften</button>
+  </div>
+
+  <div class="card" data-tags="Populær,Tidskrævende">
+    <h1>Lasagne</h1>
+    <img src="https://images.unsplash.com/photo-1589308078055-ebd6f1fbd7c8" alt="Lasagne">
+    <div class="tags">
+      <span>Populær</span>
+      <span>Tidskrævende</span>
+    </div>
+    <p>En klassisk lasagne, der tager tid, men smager fantastisk.</p>
+    <button>Se Opskriften</button>
+  </div>
+    <div class="card" data-tags="Budget,Nem,Få ingredienser">
+    <h1>Kartoffelsuppe</h1>
+    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Kartoffelsuppe">
+    <div class="tags">
+      <span>Budget</span>
+      <span>Nem</span>
+      <span>Få ingredienser</span>
+    </div>
+    <p>Varm og cremet suppe perfekt til kolde dage og et stramt budget.</p>
+    <button>Se Opskriften</button>
+  </div>
+
+  <div class="card" data-tags="Populær,Tidskrævende">
+    <h1>Lasagne</h1>
+    <img src="https://images.unsplash.com/photo-1589308078055-ebd6f1fbd7c8" alt="Lasagne">
+    <div class="tags">
+      <span>Populær</span>
+      <span>Tidskrævende</span>
+    </div>
+    <p>En klassisk lasagne, der tager tid, men smager fantastisk.</p>
+    <button>Se Opskriften</button>
+  </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="script.js"></script>
+
+
+</body>
+</html>
