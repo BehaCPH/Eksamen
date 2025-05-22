@@ -283,7 +283,7 @@ padding: 5%;
 
 /*-------------------------------------------------------------------Om os side--------------------------------------------------------------------------------*/
 
-.intro {
+.intro-omos {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-evenly;
@@ -295,15 +295,15 @@ padding: 5%;
   max-width: 900px;
 }
 
-.intro p{
+.intro-omos p{
   font-size: 2rem;
 }
 
-.intro h2{
+.intro-omos h2{
   font-size: 3rem;
 }
 
-.intro .logo img {
+.intro-omos .logo img {
   max-width: 500px;
   height: auto;
 }
@@ -422,20 +422,25 @@ padding: 5%;
 
 .intro-event {
   display: flex;
-  margin-left: 20%;
-  padding: 40px;
+  padding: 2rem;
   align-items: center;
-  gap: 4rem;
+  width: 100%;
+  justify-content: center;
+  
 }
 
-.intro-event .text-event {
-  max-width: 600px;
-  font-size: xx-large;
+.text-event{
+flex: 0.3;
+font-size: x-large
 }
 
 .intro-event img {
-width: 200%;
+width: 15rem;
 }
+
+
+/*--------------------------------------------------------Event intro slutter her---------------------------------------------------------------------------------*/
+
 
 .papir-container {
   display: flex;
@@ -481,7 +486,7 @@ width: 200%;
   flex-wrap: wrap; /* allows stacking on smaller screens */
   align-items: center;
   justify-content: space-between;
-  padding: 4vw; /* responsive padding */
+  padding: 7vw; /* responsive padding */
   width: 100%;
   height: 100%;
   color: #4B2B1B;
@@ -540,8 +545,13 @@ body {overflow-x: hidden;}
   flex-direction: row;
   width: 100%;
   gap: 50px;
-  margin-left: 0%;
+  margin-left: 0px;
   height: auto;
+}
+
+.text-event{
+flex: 1;
+font-size: x-large
 }
 
 .intro-event h2{
@@ -583,7 +593,7 @@ body {overflow-x: hidden;}
 
 .image-content img{
   display: block;
-  width: 75%;
+  width: 100%;
 }
 
 .image-content{
@@ -603,32 +613,28 @@ gap: 15%;
 
   .text-content p {
     font-size: 0.9rem;
-  }
 
-  .tape {
-    width: 120px;
-  }
 
-  .tape-top-right {
-    top: -1%;
-    right: -4%;
+
+
 }
-
-  .tape-bottom-left {
-    bottom: -1%;
-    left: -4%;
-}
-
-
 /*omos*/
 
+
+.kontakt-content{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #FADADD;
+  width: 100%;
+  justify-content: center;
+  gap: 0rem;
 }
 
 
+/*-------------------Mobil størrelse--------------------*/
 
 
-
-
+/*Navbar*/
 @media (max-width: 970px) {
   .navbar {
     flex-direction: column;
@@ -649,13 +655,15 @@ gap: 15%;
     display: block;
   }
 
+/*Event side*/
+
 .intro-event {
   display: flex; 
   flex-wrap: nowrap;
   flex-direction: row;
   width: 100%;
-  gap: 50px;
-  height: auto;
+  gap: 2rem;
+  height :auto;
 }
 
 .intro-event h2{
@@ -669,6 +677,7 @@ gap: 15%;
 
 .intro-event img{
   height: 40%;
+  width: auto;
 }
 
   .top-section,
@@ -688,11 +697,16 @@ gap: 15%;
 
   .papir-block {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    gap: 0px;
+    padding: 10%;
+    align-items: normal;
   }
+/*--hard coded størrelsen en smule mellem buttons og den anden tekst, virker ikke til at margin stadig ikke dukker op for some reason--*/
+.buttons{
+  margin-top: 15px;
+  height: 1px;
+}
 
 .image-content img{
   display: none;
@@ -705,32 +719,162 @@ flex-direction: row;
 
 }
   .text-content {
-    flex: 1 1
+    flex: 1 1;
+    height: 10%;
   }
 
   .text-content h2 {
     font-size: 1rem;
+    margin-top: 15px;
   }
 
   .text-content p {
     font-size: 0.6rem;
   }
 
-  .tape {
-    width: 120px;
-  }
-
-  .tape-top-right {
-    top: -15%;
-    right: -10%;
-}
-
-  .tape-bottom-left {
-    bottom: -15%;
-    left: -10%;
-}
-
 
 /*omos*/
 
+.intro-omos {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  padding: 40px;
+  align-items: center;
+}
+
+.intro .text {
+  max-width: 200px;
+}
+
+.intro-omos p{
+  font-size: 1rem;
+}
+
+.intro-omos h2{
+  font-size: 2rem;
+}
+
+.intro-omos{
+  max-width: 100%;
+  height: auto;
+}
+
+.intro-omos img{
+  display: none;
+}
+
+/*---intro og billede intro til om os slutter her---*/
+
+
+.team {
+  padding: 10%;
+}
+
+.team .member {
+  display: flex;
+  background-color: #a47c83;
+  color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.member.reverse {
+  gap: 0%;
+  padding: 1%;
+  flex-direction: column;
+}
+
+.team .member.reverse {
+  flex-direction: column;
+}
+
+.text-box {
+  flex: 1;
+  padding: 10px;
+  background-color: #fce9eb;
+  color: #3b3b3b;
+}
+
+.text-box h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.tags {
+  margin: 10px 0;
+}
+
+.tags span {
+  background-color: #ccc;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.socials {
+  margin-top: 10px;
+}
+
+.socials span {
+  display: inline-block;
+  background-color: white;
+  color: #333;
+  border-radius: 50%;
+  padding: 5px 10px;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.member img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+.member p{
+  font-size: 1rem;
+}
+
+.member h3{
+  font-size: 2rem;
+}
+
+.kontakt-os {
+  display: flex;
+  background-color: #a47c83;
+  color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  gap: 2%;
+  padding: 1%;
+}
+
+.kontakt-content{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #FADADD;
+  width: 100%;
+  justify-content: center;
+  gap: 0rem;
+}
+
+.kontakt-os p{
+  font-size: 1.5rem;
+  color: #333;
+  padding: 1rem;
+}
+
+.kontakt-os img{
+  width: 20rem;
+}
+
+
+
+}
 }
