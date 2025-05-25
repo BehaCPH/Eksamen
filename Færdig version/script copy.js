@@ -84,42 +84,53 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ✅ POP-UP MESSAGE (LÆSE MERE)
-document.addEventListener("DOMContentLoaded", () => {
-  // Open popup
-  document.querySelectorAll(".open-popup").forEach(button => {
-    button.addEventListener("click", () => {
-      const popupId = button.getAttribute("data-popup");
-      const popup = document.getElementById(popupId);
-      if (popup) popup.style.display = "flex";
+  function toggleTerm(clickedBox) {
+    document.querySelectorAll('.term-box').forEach(box => {
+      if (box !== clickedBox) box.classList.remove('expanded');
     });
-  });
+    clickedBox.classList.toggle('expanded');
+  }
 
-  // Close popup
-  document.querySelectorAll(".close-btn").forEach(button => {
-    button.addEventListener("click", () => {
-      const popup = button.closest(".popup-overlay");
-      if (popup) popup.style.display = "none";
-    });
-  });
 
-  // Handle form submission
-  document.querySelectorAll("form[id^='popup-form']").forEach(form => {
-    form.addEventListener("submit", function(event) {
-      event.preventDefault();
-      const number = this.id.replace("popup-form", "");
-      const confirmation = document.getElementById("confirmation" + number);
-      if (confirmation) {
-        confirmation.style.display = "block";
-        setTimeout(() => {
-          confirmation.style.display = "none";
-          this.closest(".popup-overlay").style.display = "none";
-        }, 2000);
-      }
-    });
+    function openPopup() {
+    document.querySelector(".popup-overlay").style.display = "flex";
+  }
+
+  function closePopup() {
+    document.querySelector(".popup-overlay").style.display = "none";
+  }
+
+// Open popup buttons (multiple)
+document.querySelectorAll('.openPopup').forEach(button => {
+  button.addEventListener('click', () => {
+    const popupId = button.getAttribute('data-popup');
+    const popup = document.getElementById(popupId);
+    if (popup) {
+      popup.classList.add('active');
+    }
+  });
+});
+
+// Close popup buttons (multiple)
+document.querySelectorAll('.closePopup').forEach(button => {
+  button.addEventListener('click', () => {
+    const popup = button.closest('.overlay');
+    if (popup) {
+      popup.classList.remove('active');
+    }
   });
 });
 
 
+
+
+// Automatisk tilknytning
+document.querySelectorAll('.readmore-button').forEach(button => {
+  button.addEventListener('click', () => {
+    const popupId = button.getAttribute('data-popup');
+    openPopup(popupId);
+  });
+});
 
 // EMAILJS Script
 
