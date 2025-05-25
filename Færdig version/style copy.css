@@ -411,11 +411,12 @@ body {
       width: 85%;
       gap: 40px;
       position: relative;
-      z-index: 1;
+      /* fjernede Z-index herfra, fordi... */
     }
 
     .text {
       flex: 1;
+      
     }
 
     .text h1 {
@@ -882,38 +883,41 @@ body {
 /*-------------------------------------Popup styling--------------------------------------------------------------------------------------------------------------*/
 
 .popup-overlay {
-  display: none;
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none; /* hidden by default */
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 9999;
 }
 
+.popup-content p span{
+  color: darkred;
+}
+
+
 .popup-content {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  width: 300px;
+  background: #f6dadb;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  text-align: left;
   position: relative;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 
 .close-btn {
   position: absolute;
   top: 10px;
   right: 15px;
-  font-size: 20px;
+  font-size: 24px;
   cursor: pointer;
 }
-
-.confirmation-message {
-  display: none;
-  color: green;
-  margin-top: 10px;
-}
-
 
 
 
@@ -938,6 +942,7 @@ body {
   transition: background-color 0.3s ease;
 }
 
+
 .signup-button:hover {
   background-color: #8b5c6d;
 }
@@ -953,7 +958,7 @@ body {
   display: none;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .overlay.active {
