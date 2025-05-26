@@ -79,20 +79,19 @@
           og få det bedømt af dommer og måske vind 
           æren i at du kan bage blind!</p>
           <div class="buttons">
-        <!--<button onclick="openPopup()">Læs mere</button>-->
-            <a href="#">Tilmeld dig!</a>
           </div>
         </div>
         <div class="image-section">
           <img src="img/OIP (1).jpg" alt="Muffins">
           <div class="buttons">
-        <button onclick="openPopup()">Læs mere</button>
+<button class="readmore-button" data-popup="event1">Læs mere</button>
 <div class="content">
     <button class="signup-button openPopup" data-popup="popup1">Tilmeld dig</button>
   </div>
 
   <div id="popup1" class="overlay">
     <button class="close-button closePopup">&times;</button>
+      <div class="overlay-title"><h1>TILMELD DIG EVENTET</h1></div>
     <form id="signpopup1" class="form-popup">
       <label for="name1">NAVN</label>
       <input type="text" id="name1" name="name" required>
@@ -117,19 +116,37 @@
         </div>
       </div>
     </div>
-    <div id="popup" class="popup-overlay">
-      <div class="popup-content">
-        <span class="close-btn" onclick="closePopup()">×</span>
-    <h2>Læs mere</h2>
-    <p>Eventinfo: Bage i blinde! <br>
-
-Dato: Lørdag d. 15. juni 2025 <br>
-Tid: Kl. 13:00 – 16:30 <br>
-Placering: Baghuset, Søndre Allé 22, 2000 Frederiksberg <br>
-Pris: 100 kr. pr. par.
-<br>
-</p>
-<p><span>Du får dit eget bagværk med hjem!</span></p>
+<div class="info-popup-overlay" style="display: none;">
+  <div class="info-popup">
+    <div id="info-content">
+      <div id="event-content" style="display: none;">
+  <div id="event1">
+    <h2>Eventinfo: Bage i blinde!</h2>
+    <p><strong>Dato:</strong> Lørdag d. 15. juni 2025 <br><br>
+<strong>Tid:</strong> Kl. 13:00 – 16:30 <br><br>
+<strong>Placering:</strong> Baghuset, Søndre Allé 22, 2000 Frederiksberg <br><br>
+<strong>Pris:</strong> 100 kr. pr. par. <br> <br>
+<span>Du får dit eget bagværk med hjem!</span></p>
+  </div>
+  <div id="event2">
+    <h2>Eventinfo: Kursus for nybegyndere</h2>
+    <p><strong>Dato:</strong> Onsdag d. 25. juni 2025 <br><br>
+<strong>Tid:</strong> Kl. 13:00 – 16:30 <br><br>
+<strong>Placering:</strong> Baghuset, Søndre Allé 22, 2000 Frederiksberg <br><br>
+<strong>Pris:</strong> 100 kr. pr. par. <br><br>
+<span>Du får dit eget bagværk med hjem!</span></p>
+  </div>
+  <div id="event3">
+    <h2>Eventinfo: Bageopskrift innovation</h2>
+    <p><strong>Dato:</strong> Tirsdag d. 5. August 2025 <br><br>
+<strong>Tid:</strong> Kl. 13:00 – 16:30 <br><br>
+<strong>Placering:</strong> Baghuset, Søndre Allé 22, 2000 Frederiksberg <br><br>
+<strong>Pris:</strong> 100 kr. pr. par. <br><br> 
+<span>Du får dit eget bagværk med hjem!</span></p>
+  </div>
+</div>
+    </div> <!-- We'll insert HTML here -->
+    <button class="closeInfoPopup">Luk</button>
   </div>
 </div>
     </div>
@@ -140,20 +157,16 @@ Pris: 100 kr. pr. par.
       <img src="img/Paper-tape.png" alt="Pink paper background" class="background">
       <div class="paper-content">
         <div class="text">
-          <h1>Bage i blinde!</h1>
-          <p>Kom og test dit venskab og dine bage evner.</p>
-          <p>Tilmeld dig og en ven og kom og bag blind,
-          og få det bedømt af dommer og måske vind 
-          æren i at du kan bage blind!</p>
-          <div class="buttons">
-        <button onclick="openPopup()">Læs mere</button>
-            <a href="#">Tilmeld dig!</a>
-          </div>
+          <h1>Kursus for nybegyndere</h1>
+          <p>Nysgerrig på at lære at bage?</p>
+          <p>Tilmeld dig vores begynderkursus, hvor vi guider dig gennem de grundlæggende teknikker.
+
+Alle kan være med – kom og bag med os!</p>
         </div>
         <div class="image-section">
           <img src="img/OIP (1).jpg" alt="Muffins">
           <div class="buttons">
-        <button onclick="openPopup()">Læs mere</button>
+<button class="readmore-button" data-popup="event2">Læs mere</button>
   <div class="content">
     <button class="signup-button openPopup" data-popup="popup2">Tilmeld dig</button>
   </div>
@@ -184,42 +197,56 @@ Pris: 100 kr. pr. par.
         </div>
       </div>
     </div>
-    <div id="popup" class="popup-overlay">
-  <div class="popup-content">
-    <span class="close-btn" onclick="closePopup()">×</span>
-    <h2>Læs mere</h2>
-    <p>Eventinfo: Bage i blinde! <br>
-
-Dato: Lørdag d. 15. juni 2025 <br>
-Tid: Kl. 13:00 – 16:30 <br>
-Placering: Baghuset, Søndre Allé 22, 2000 Frederiksberg <br>
-Pris: 100 kr. pr. par.
-<br>
-<p><span>Du får dit eget bagværk med hjem!</span> </p></p>
+<div class="info-popup-overlay" style="display: none;">
+  <div class="info-popup">
+    <div id="info-content">
+      <div id="event-content" style="display: none;">
+  <div id="event1">
+    <h2>Eventinfo: Bage i blinde!</h2>
+    <p><strong>Dato:</strong> Lørdag d. 15. juni 2025 <br><br>
+<strong>Tid:</strong> Kl. 13:00 – 16:30 <br><br>
+<strong>Placering:</strong> Baghuset, Søndre Allé 22, 2000 Frederiksberg <br><br>
+<strong>Pris:</strong> 100 kr. pr. par. <br> <br>
+<span>Du får dit eget bagværk med hjem!</span></p>
+  </div>
+  <div id="event2">
+    <h2>Eventinfo: Kursus for nybegyndere</h2>
+    <p><strong>Dato:</strong> Onsdag d. 25. juni 2025 <br><br>
+<strong>Tid:</strong> Kl. 13:00 – 16:30 <br><br>
+<strong>Placering:</strong> Baghuset, Søndre Allé 22, 2000 Frederiksberg <br><br>
+<strong>Pris:</strong> 100 kr. pr. par. <br><br>
+<span>Du får dit eget bagværk med hjem!</span></p>
+  </div>
+  <div id="event3">
+    <h2>Eventinfo: Bageopskrift innovation</h2>
+    <p><strong>Dato:</strong> Tirsdag d. 5. August 2025 <br><br>
+<strong>Tid:</strong> Kl. 13:00 – 16:30 <br><br>
+<strong>Placering:</strong> Baghuset, Søndre Allé 22, 2000 Frederiksberg <br><br>
+<strong>Pris:</strong> 100 kr. pr. par. <br><br> 
+<span>Du får dit eget bagværk med hjem!</span></p>
+  </div>
+</div>
+    </div> <!-- We'll insert HTML here -->
+    <button class="closeInfoPopup">Luk</button>
   </div>
 </div>
     </div>
 
 <!--event3-->    
-        <div class="page-wrapper">
+<div class="page-wrapper">
     <div class="paper">
       <img src="img/Paper-tape.png" alt="Pink paper background" class="background">
       <div class="paper-content">
         <div class="text">
-          <h1>Bage i blinde!</h1>
-          <p>Kom og test dit venskab og dine bage evner.</p>
-          <p>Tilmeld dig og en ven og kom og bag blind,
-          og få det bedømt af dommer og måske vind 
-          æren i at du kan bage blind!</p>
-          <div class="buttons">
-        <button onclick="openPopup()">Læs mere</button>
-            <a href="#">Tilmeld dig!</a>
-          </div>
+          <h1>Bageopskrift innovation</h1>
+          <p>Har du en god opskrift i ærmet og vil gerne dele med andre? </p>
+          <p> Så kom på vores innovations kursus hvor vi bager med nye opskrifter! <br>
+Vinderen får opslået deres opskrift på vores hjemmeside</p>
         </div>
         <div class="image-section">
           <img src="img/OIP (1).jpg" alt="Muffins">
           <div class="buttons">
-        <button onclick="openPopup()">Læs mere</button>
+<button class="readmore-button" data-popup="event3">Læs mere</button>
 <div class="content">
   <button class="signup-button openPopup" data-popup="popup3">Tilmeld dig</button>
 </div>
@@ -250,21 +277,56 @@ Pris: 100 kr. pr. par.
         </div>
       </div>
     </div>
-    <div id="popup" class="popup-overlay">
-  <div class="popup-content">
-    <span class="close-btn" onclick="closePopup()">×</span>
-    <h2>Læs mere</h2>
-    <p>Eventinfo: Bage i blinde! <br>
-
-Dato: Lørdag d. 15. juni 2025 <br>
-Tid: Kl. 13:00 – 16:30 <br>
-Placering: Baghuset, Søndre Allé 22, 2000 Frederiksberg <br>
-Pris: 100 kr. pr. par.
-<br>
-<p><span>Du får dit eget bagværk med hjem!</span> </p></p>
+<div class="info-popup-overlay" style="display: none;">
+  <div class="info-popup">
+    <div id="info-content">
+      <div id="event-content" style="display: none;">
+  <div id="event1">
+    <h2>Eventinfo: Bage i blinde!</h2>
+    <p><strong>Dato:</strong> Lørdag d. 15. juni 2025 <br><br>
+<strong>Tid:</strong> Kl. 13:00 – 16:30 <br><br>
+<strong>Placering:</strong> Baghuset, Søndre Allé 22, 2000 Frederiksberg <br><br>
+<strong>Pris:</strong> 100 kr. pr. par. <br> <br>
+<span>Du får dit eget bagværk med hjem!</span></p>
+  </div>
+  <div id="event2">
+    <h2>Eventinfo: Kursus for nybegyndere</h2>
+    <p><strong>Dato:</strong> Onsdag d. 25. juni 2025 <br><br>
+<strong>Tid:</strong> Kl. 13:00 – 16:30 <br><br>
+<strong>Placering:</strong> Baghuset, Søndre Allé 22, 2000 Frederiksberg <br><br>
+<strong>Pris:</strong> 100 kr. pr. par. <br><br>
+<span>Du får dit eget bagværk med hjem!</span></p>
+  </div>
+  <div id="event3">
+    <h2>Eventinfo: Bageopskrift innovation</h2>
+    <p><strong>Dato:</strong> Tirsdag d. 5. August 2025 <br><br>
+<strong>Tid:</strong> Kl. 13:00 – 16:30 <br><br>
+<strong>Placering:</strong> Baghuset, Søndre Allé 22, 2000 Frederiksberg <br><br>
+<strong>Pris:</strong> 100 kr. pr. par. <br><br> 
+<span>Du får dit eget bagværk med hjem!</span></p>
+  </div>
+</div>
+    </div> <!-- We'll insert HTML here -->
+    <button class="closeInfoPopup">Luk</button>
   </div>
 </div>
     </div>
+
+
+<div id="confirmationOverlay" class="overlay" style="display: none;">
+  <div class="form-popup">
+    <p>✅ Tilmelding sendt!</p>
+    <button class="close-confirmation">Luk</button>
+  </div>
+</div>
+
+
+
+
+<!-- Hidden event contents -->
+
+
+
 
    <footer>
     <div class="footer">
@@ -300,17 +362,20 @@ Pris: 100 kr. pr. par.
     </div>
   </footer>
 
-<script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
+<!--emailJS start-->
 
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
   (function(){
-    emailjs.init("enmCtE7S6uARh8GUZ"); // Replace with your EmailJS user ID
+    emailjs.init("enmCtE7S6uARh8GUZ");
   })();
 </script>
+ 
+<!--email slut-->
+
 
 
 <script src="script copy.js"></script>
-
 
 </body>
 </html> 
