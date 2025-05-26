@@ -385,7 +385,7 @@ body {
     .paper {
       max-width: 1500px;
       width: 100%;
-      aspect-ratio: 12 / 4.5;
+      aspect-ratio: 12 / 6.5;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -882,47 +882,43 @@ body {
 
 /*-------------------------------------Popup styling--------------------------------------------------------------------------------------------------------------*/
 
-.popup-overlay {
+.info-popup-overlay {
+  display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  z-index: 1000;
+  top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(0, 0, 0, 0.6);
-  display: none; /* hidden by default */
   justify-content: center;
   align-items: center;
-  z-index: 9999;
 }
 
-.popup-content p span{
+.info-popup {
+  background: #A67B87;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+#info-content p, h2{
+  margin-bottom: 1rem;
+  color: white;
+  gap: 1rem;
+}
+
+#info-content span{
   color: darkred;
 }
 
 
-.popup-content {
-  background: #f6dadb;
-  padding: 30px;
-  border-radius: 12px;
-  max-width: 500px;
-  width: 90%;
-  text-align: left;
-  position: relative;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-
-
 
 /*-----------------Tilmeld popup--------------------*/
+
+.overlay-title{
+  display: flex;
+  flex-direction: column;
+}
 
 
 .content {
@@ -954,7 +950,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.6);
+  background-color: #FADADD;
   display: none;
   justify-content: center;
   align-items: center;
@@ -963,6 +959,7 @@ body {
 
 .overlay.active {
   display: flex;
+  flex-direction: column;
 }
 
 .form-popup {
@@ -1026,6 +1023,18 @@ select,
   padding: 0.5rem 1rem;
   cursor: pointer;
 }
+
+
+
+/*-----------------confirmation overlay--------------------*/
+
+
+
+
+
+
+
+
 /*-----------------Om os--------------------*/
 
 
@@ -1112,7 +1121,7 @@ select,
       }
 
       .image-section .buttons {
-        display: none;
+        display: flex;
       }
 
       .text .buttons {
@@ -1165,4 +1174,158 @@ select,
 }
 
 
+/* RESPONSIVE STYLES */
+    @media (min-width: 769px) {
+      .text .buttons {
+        display: none;
+      }
 
+      .image-section .buttons {
+        display: flex;
+      }
+    }
+
+
+@media (max-width: 412px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-end; /* Align to the right side */
+    gap: 10px; /* 👈 reduce space between cupcakes */
+    position: fixed;
+    top: 0;
+    right: -220px;
+    width: 200px;
+    height: 100vh;
+    background-color: #9c7581;
+    padding: 70px 20px 0 20px; /* 👈 top padding for spacing below header */
+    z-index: 9999;
+    transition: right 0.3s ease;
+  }
+
+  .navbar.active {
+    right: 0;
+  }
+
+  .cupcake {
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+    z-index: 10000;
+  }
+
+  .menu-close {
+    display: block;
+  }
+
+
+
+  /*Front-page-index*/
+  .fr-container{
+    margin: 20px;
+  }
+  .fr-text{
+    text-align: center;
+  }
+
+.fr-text p{
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .fr-text h1{
+    font-size: 1.4rem;
+  }
+
+
+  .fr-image{
+    display: none;
+  }
+  
+        .paper-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0px;
+      }
+
+      .image-section img {
+        display: none;
+      }
+
+      .text {
+        width: 100%;
+      }
+
+      .buttons {
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 0px;
+        display: none;
+      }
+
+      .image-section .buttons {
+        display: flex;
+        flex-direction: row;
+      }
+         .paper {
+      max-width: 1500px;
+      width: 100%;
+      aspect-ratio: 12 / 17;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      position: relative;
+    }
+
+      .text .buttons {
+        display: flex;
+      }
+
+/*begynder side*/
+.table-wrapper {
+    max-width: auto;
+}
+
+/*recipe-layout*/
+  .muf-top-section,
+  .steps-section {
+    flex-direction: column;
+  }
+
+  .image img,
+  .step-image img {
+    height: auto;
+  }
+
+  .muf-left, .image {
+    flex: none;
+  }
+
+  .ingredients-list {
+    gap: 20px;
+  }
+
+  .step-wrapper,
+  .step-wrapper.reverse {
+    flex-direction: column !important;
+    align-items: stretch;
+  }
+
+  .step-text,
+  .step-image {
+    flex: 1 1 100%;
+    min-width: auto;
+  }
+
+  .step-text {
+    border-radius: 15px 15px 0 0;
+  }
+
+  .step-image img {
+    border-radius: 0 0 15px 15px;
+  }
+}
