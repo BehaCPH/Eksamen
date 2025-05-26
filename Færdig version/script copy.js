@@ -87,8 +87,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// ✅ POP-UP MESSAGE (LÆSE MERE)
-// Toggle term boxes (unchanged)
+// ✅ POP-UP MESSAGEs (LÆSE MERE og TILMELD)
+// Toggle term boxes
 function toggleTerm(clickedBox) {
   document.querySelectorAll('.term-box').forEach(box => {
     if (box !== clickedBox) box.classList.remove('expanded');
@@ -96,7 +96,7 @@ function toggleTerm(clickedBox) {
   clickedBox.classList.toggle('expanded');
 }
 
-// ✅ FORM popup open/close
+// ✅ tilmeld form popup open/close
 function openFormPopup() {
   document.querySelector(".popup-overlay").style.display = "flex";
 }
@@ -104,7 +104,7 @@ function closeFormPopup() {
   document.querySelector(".popup-overlay").style.display = "none";
 }
 
-// ✅ INFO popup open/close with dynamic HTML
+// ✅ INFO popup open/close med dynamisk HTML
 function openInfoPopup(eventId) {
   const eventHTML = document.querySelector(`#event-content #${eventId}`);
   const infoContainer = document.getElementById("info-content");
@@ -126,22 +126,28 @@ document.querySelectorAll('.readmore-button').forEach(button => {
   });
 });
 
-// ✅ Bind "Tilmeld" form buttons (you can keep using .openPopup if you're using .form-popup)
+// ✅ Bind "Tilmeld" form buttons (opens form popup)
 document.querySelectorAll('.openPopup').forEach(button => {
   button.addEventListener('click', () => {
     const popupId = button.getAttribute('data-popup');
     const popup = document.getElementById(popupId);
     if (popup) {
+      // Reset form inside popup each time it's opened
+      const form = popup.querySelector("form");
+      if (form) form.reset();
+
+      popup.style.display = "flex";
       popup.classList.add('active');
     }
   });
 });
 
-// ✅ Close buttons for both popups
+// ✅ Close buttons til begge "popups"
 document.querySelectorAll('.closePopup').forEach(button => {
   button.addEventListener('click', () => {
     const popup = button.closest('.overlay');
     if (popup) {
+      popup.style.display = "none";
       popup.classList.remove('active');
     }
   });
@@ -150,6 +156,62 @@ document.querySelectorAll('.closeInfoPopup').forEach(button => {
   button.addEventListener('click', closeInfoPopup);
 });
 
-// EMAILJS Script
+// ✅ EMAILJS kode
+document.querySelectorAll(".form-popup").forEach(form => {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_exp22vr", "template_wxxwn46", this)
+      .then(() => {
+        const overlay = form.closest(".overlay");
+        if (overlay) {
+          overlay.style.display = "none";
+          overlay.classList.remove("active");
+        }
+
+        form.reset();
+
+        // Vis confirmation popup
+        document.getElementById("confirmationPopup").style.display = "flex";
+      })
+      .catch((error) => {
+        console.error("EmailJS fejl:", error);
+        alert("Noget gik galt. Prøv igen.");
+      });
+  });
+});
+
+// ✅ Luk confirmation popup
+document.getElementById("closeConfirmation").addEventListener("click", () => {
+  document.getElementById("confirmationPopup").style.display = "none";
+});
+
+// EMAILJS kode
+
+  document.querySelectorAll(".form-popup").forEach(form => {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      emailjs.sendForm("service_exp22vr", "template_wxxwn46", this)
+        .then(() => {
+          const overlay = form.closest(".overlay");
+          if (overlay) overlay.style.display = "none";
+
+          form.reset();
+
+          // vis confirmation popup
+          document.getElementById("confirmationPopup").style.display = "flex";
+        })
+        .catch((error) => {
+          console.error("EmailJS fejl:", error);
+          alert("Noget gik galt. Prøv igen.");
+        });
+    });
+  });
+
+  // luk confirmation popup
+  document.getElementById("closeConfirmation").addEventListener("click", () => {
+    document.getElementById("confirmationPopup").style.display = "none";
+  });
 
 
