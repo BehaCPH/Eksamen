@@ -83,24 +83,50 @@ document.addEventListener("DOMContentLoaded", () => {
   filterCards();
 });
 
+
+
+
+
 // ✅ POP-UP MESSAGE (LÆSE MERE)
-  function toggleTerm(clickedBox) {
-    document.querySelectorAll('.term-box').forEach(box => {
-      if (box !== clickedBox) box.classList.remove('expanded');
-    });
-    clickedBox.classList.toggle('expanded');
+// Toggle term boxes (unchanged)
+function toggleTerm(clickedBox) {
+  document.querySelectorAll('.term-box').forEach(box => {
+    if (box !== clickedBox) box.classList.remove('expanded');
+  });
+  clickedBox.classList.toggle('expanded');
+}
+
+// ✅ FORM popup open/close
+function openFormPopup() {
+  document.querySelector(".popup-overlay").style.display = "flex";
+}
+function closeFormPopup() {
+  document.querySelector(".popup-overlay").style.display = "none";
+}
+
+// ✅ INFO popup open/close with dynamic HTML
+function openInfoPopup(eventId) {
+  const eventHTML = document.querySelector(`#event-content #${eventId}`);
+  const infoContainer = document.getElementById("info-content");
+
+  if (eventHTML && infoContainer) {
+    infoContainer.innerHTML = eventHTML.innerHTML;
+    document.querySelector(".info-popup-overlay").style.display = "flex";
   }
+}
+function closeInfoPopup() {
+  document.querySelector(".info-popup-overlay").style.display = "none";
+}
 
+// ✅ Bind read-more buttons for info popup
+document.querySelectorAll('.readmore-button').forEach(button => {
+  button.addEventListener('click', () => {
+    const popupId = button.getAttribute('data-popup');
+    openInfoPopup(popupId);
+  });
+});
 
-    function openPopup() {
-    document.querySelector(".popup-overlay").style.display = "flex";
-  }
-
-  function closePopup() {
-    document.querySelector(".popup-overlay").style.display = "none";
-  }
-
-// Open popup buttons (multiple)
+// ✅ Bind "Tilmeld" form buttons (you can keep using .openPopup if you're using .form-popup)
 document.querySelectorAll('.openPopup').forEach(button => {
   button.addEventListener('click', () => {
     const popupId = button.getAttribute('data-popup');
@@ -111,7 +137,7 @@ document.querySelectorAll('.openPopup').forEach(button => {
   });
 });
 
-// Close popup buttons (multiple)
+// ✅ Close buttons for both popups
 document.querySelectorAll('.closePopup').forEach(button => {
   button.addEventListener('click', () => {
     const popup = button.closest('.overlay');
@@ -120,47 +146,10 @@ document.querySelectorAll('.closePopup').forEach(button => {
     }
   });
 });
-
-
-
-
-// Automatisk tilknytning
-document.querySelectorAll('.readmore-button').forEach(button => {
-  button.addEventListener('click', () => {
-    const popupId = button.getAttribute('data-popup');
-    openPopup(popupId);
-  });
+document.querySelectorAll('.closeInfoPopup').forEach(button => {
+  button.addEventListener('click', closeInfoPopup);
 });
 
 // EMAILJS Script
 
-emailjs.init(enmCtE7S6uARh8GUZ);
-
-document.addEventListener('DOMContentLoaded', () => {
-  // Select all forms that should send email
-  const forms = document.querySelectorAll('.form-popup');
-
-  forms.forEach(form => {
-    form.addEventListener('submit', function(event) {
-      event.preventDefault(); // prevent default page reload
-
-      emailjs.sendForm('service_h74es63', 'template_j67e5qn', this)
-        .then(() => {
-          alert('Tilmelding sendt! Tak for din tilmelding.');
-
-          // Close popup
-          const popup = this.closest('.overlay');
-          if (popup) {
-            popup.classList.remove('active');
-          }
-
-          this.reset(); // clear form fields
-        })
-        .catch(error => {
-          alert('Ups, der skete en fejl. Prøv igen senere.');
-          console.error('EmailJS error:', error);
-        });
-    });
-  });
-});
 
