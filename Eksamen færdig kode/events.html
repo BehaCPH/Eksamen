@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <title>Kop & Krumme events</title>
+  <meta name="description"
+    content="Lær at bage med Kop & Krumme - en hyggelig hjemmeside med nemme opskrifter, bageevents og tips til begyndere.">
+  <meta name="keywords"
+    content="bage for begyndere, bageopskrifter, nem bagning, bage events, fællesskab, kop og krumme, bagetips, lær at bage, pris, betaling, tilmelding, mød mennesker, kom og bag selv, konkurrence, bag i blinde,  ">
+  <meta name="author" content="Kop & Krumme Team">
+
+  <!--Bootstrap-->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <!--Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<!--Total Navbar-->
+  <header class="header">
+    <a href="index.html" class="logo">
+      <img src="img/logo.png" alt="Logo" height="40" />
+    </a>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+<nav class="navbar" id="navLinks">
+  <a href="begynder.html" class="cupcake-link">
+    <div class="cupcake">
+      <img src="img/Cupnotfilled.png" alt="Cupcake" />
+      <span class="cupcake-text">Begynder</span>
+    </div>
+  </a>
+  <a href="opskifter.html" class="cupcake-link">
+    <div class="cupcake">
+      <img src="img/Cupnotfilled.png" alt="Cupcake" />
+      <span class="cupcake-text">Opskrifter</span>
+    </div>
+  </a>
+  <a href="events.html" class="cupcake-link">
+    <div class="cupcake">
+      <img src="img/Cupnotfilled.png" alt="Cupcake" />
+      <span class="cupcake-text">Events</span>
+    </div>
+  </a>
+  <a href="omos.html" class="cupcake-link">
+    <div class="cupcake">
+      <img src="img/Cupnotfilled.png" alt="Cupcake" />
+      <span class="cupcake-text">Om os</span>
+    </div>
+  </a>
+  <button class="menu-close" onclick="toggleMenu()">✕</button>
+  
+</nav>
+  </header>
+
+    <section class="fr-container">
+    <div class="fr-text">
+      <h1>EVENTS HOS KOP&KRUMME</h1>
+      <br>
+      <p>Vi her i Kop&Krumme holder løbende events, læs mere om vores kommende forneden! </p>
+      <br>
+      <p>Vi glæder os til at se jer.</p>
+    </div>
+    <div class="fr-image">
+      <img src="img/Frontpic.png" alt="Frontpic">
+    </div>
+  </section>
+
+    <img src="img/penstroke.png" alt="stroke" style="width: 100%;">
+
+  <!--event1-->    
+        <div class="page-wrapper">
+    <div class="paper">
+      <img src="img/Paper-tape.png" alt="Pink paper background" class="background">
+      <div class="paper-content">
+        <div class="text">
+          <h1>Bage i blinde!</h1>
+          <p>Kom og test dit venskab og dine bage evner.</p>
+          <p>Tilmeld dig og en ven og kom og bag blind,
+          og få det bedømt af dommer og måske vind 
+          æren i at du kan bage blind!</p>
+          <div class="buttons">
+        <button onclick="openPopup()">Læs mere</button>
+            <a href="#">Tilmeld dig!</a>
+          </div>
+        </div>
+        <div class="image-section">
+          <img src="img/bagblind.png" alt="bakeblind event">
+          <div class="buttons">
+        <button onclick="openPopup()">Læs mere</button>
+            <a href="#">Tilmeld dig!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="popup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">×</span>
+    <h2>Læs mere</h2>
+    <p>Eventinfo: Bage i blinde! <br>
+
+Dato: Lørdag d. 15. juni 2025 <br>
+Tid: Kl. 13:00 – 16:30 <br>
+Placering: Baghuset, Søndre Allé 22, 2000 Frederiksberg <br>
+Pris: 100 kr. pr. par.
+<br>
+<p><span>Du får dit eget bagværk med hjem!</span> </p></p>
+  </div>
+</div>
+    </div>
+
+ <!--event2-->    
+        <div class="page-wrapper">
+    <div class="paper">
+      <img src="img/Paper-tape.png" alt="Pink paper background" class="background">
+      <div class="paper-content">
+        <div class="text">
+          <h1>Bage i blinde!</h1>
+          <p>Kom og test dit venskab og dine bage evner.</p>
+          <p>Tilmeld dig og en ven og kom og bag blind,
+          og få det bedømt af dommer og måske vind 
+          æren i at du kan bage blind!</p>
+          <div class="buttons">
+        <button onclick="openPopup()">Læs mere</button>
+            <a href="#">Tilmeld dig!</a>
+          </div>
+        </div>
+        <div class="image-section">
+          <img src="img/nybegynder.png" alt="learn to bake event">
+          <div class="buttons">
+        <button onclick="openPopup()">Læs mere</button>
+            <a href="#">Tilmeld dig!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="popup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">×</span>
+    <h2>Læs mere</h2>
+    <p>Eventinfo: Bage i blinde! <br>
+
+Dato: Lørdag d. 15. juni 2025 <br>
+Tid: Kl. 13:00 – 16:30 <br>
+Placering: Baghuset, Søndre Allé 22, 2000 Frederiksberg <br>
+Pris: 100 kr. pr. par.
+<br>
+<p><span>Du får dit eget bagværk med hjem!</span> </p></p>
+  </div>
+</div>
+    </div>
+
+<!--event3-->    
+        <div class="page-wrapper">
+    <div class="paper">
+      <img src="img/Paper-tape.png" alt="Pink paper background" class="background">
+      <div class="paper-content">
+        <div class="text">
+          <h1>Bage i blinde!</h1>
+          <p>Kom og test dit venskab og dine bage evner.</p>
+          <p>Tilmeld dig og en ven og kom og bag blind,
+          og få det bedømt af dommer og måske vind 
+          æren i at du kan bage blind!</p>
+          <div class="buttons">
+        <button onclick="openPopup()">Læs mere</button>
+            <a href="#">Tilmeld dig!</a>
+          </div>
+        </div>
+        <div class="image-section">
+          <img src="img/innovation.png" alt="cooking innovation event">
+          <div class="buttons">
+        <button onclick="openPopup()">Læs mere</button>
+            <a href="#">Tilmeld dig!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="popup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">×</span>
+    <h2>Læs mere</h2>
+    <p>Eventinfo: Bage i blinde! <br>
+
+Dato: Lørdag d. 15. juni 2025 <br>
+Tid: Kl. 13:00 – 16:30 <br>
+Placering: Baghuset, Søndre Allé 22, 2000 Frederiksberg <br>
+Pris: 100 kr. pr. par.
+<br>
+<p><span>Du får dit eget bagværk med hjem!</span> </p></p>
+  </div>
+</div>
+    </div>
+
+   <footer>
+    <div class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="begynder.html">Begynder</a></li>
+      <li class="menu__item"><a class="menu__link" href="opskifter.html">Opskifter</a></li>
+      <li class="menu__item"><a class="menu__link" href="events.html">Events</a></li>
+      <li class="menu__item"><a class="menu__link" href="omos.html">Om os</a></li>
+
+    </ul>
+    <p>&copy;2025 Gruppe 5 Mul-B | All Rights Reserved</p>
+    </div>
+  </footer>
+    
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html> 

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kop & Krumme begynderside</title>
+  <meta name="description"
+    content="Lær at bage med Kop & Krumme - en hyggelig hjemmeside med nemme opskrifter, bageevents og tips til begyndere.">
+  <meta name="keywords"
+    content="bage for begyndere, bageopskrifter, nem bagning, ordbog, termer, bagetermer, udtryk, bage udtryk, tips, tricks, tips og tricks, lær noget nyt, fællesskab, kop og krumme, bagetips, lær at bage">
+  <meta name="author" content="Kop & Krumme Team">
+
+  <!--Bootstrap-->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <!--Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!--Total Navbar-->
+  <header class="header">
+    <a href="index.html" class="logo">
+      <img src="img/logo.png" alt="Logo" height="40" />
+    </a>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav class="navbar" id="navLinks">
+      <a href="begynder.html" class="cupcake-link">
+        <div class="cupcake">
+          <img src="img/Cupnotfilled.png" alt="Cupcake" />
+          <span class="cupcake-text">Begynder</span>
+        </div>
+      </a>
+      <a href="opskifter.html" class="cupcake-link">
+        <div class="cupcake">
+          <img src="img/Cupnotfilled.png" alt="Cupcake" />
+          <span class="cupcake-text">Opskrifter</span>
+        </div>
+      </a>
+      <a href="events.html" class="cupcake-link">
+        <div class="cupcake">
+          <img src="img/Cupnotfilled.png" alt="Cupcake" />
+          <span class="cupcake-text">Events</span>
+        </div>
+      </a>
+      <a href="omos.html" class="cupcake-link">
+        <div class="cupcake">
+          <img src="img/Cupnotfilled.png" alt="Cupcake" />
+          <span class="cupcake-text">Om os</span>
+        </div>
+      </a>
+      <button class="menu-close" onclick="toggleMenu()">✕</button>
+
+    </nav>
+  </header>
+
+  <div class="begynder-tips">
+    <h1>Begynder Tips</h1>
+    <div class="box-1">
+      <p>
+        Er du ny i bageverdenen? Fortvivl ej - her får du vores bedste tips, forklaringer og små tricks, så du kan føle
+        dig som en vaskeægte kagetrold med det samme!
+      </p>
+    </div>
+  </div>
+
+
+  <div class="bagetips-tricks">
+    <h1>BAGETIPS & TRICKS</h1>
+    <div class="box-1">
+      <p>1. Brug en isske til ensartede muffins</p>
+      <p>2. Forvarm altid ovnen - det gør en større forskel end du tror!</p>
+      <p>3. Lad smør blive blødt i 20 minutter - så bliver din dej nemmere at arbejde med</p>
+
+    </div>
+  </div>
+
+
+  <h2 class="ordbog-title">Bageterm Ordborg</h2>
+  <div class="ordbog">
+    <div class="terms">
+      <button data-target="aelte">ÆLTE</button>
+      <button data-target="marmor">MARMORERET</button>
+      <button data-target="piske">PISKE</button>
+      <button data-target="smuldre">SMULDRE</button>
+      <button data-target="haeve">HÆVE</button>
+      <button data-target="afsvaling">AFSVALING</button>
+      <button data-target="pensle">PENSLE</button>
+      <button data-target="foldning">FOLDNING</button>
+      <button data-target="sla">SLÅ LUFTEN UD</button>
+      <button data-target="hvedemel">HVEDEMEL</button>
+      <button data-target="fuldkorn">FULDKORNSMEL</button>
+      <button data-target="rugmel">RUGMEL</button>
+    </div>
+
+    <div class="description" id="aelte">
+      <strong>ÆLTE</strong>
+      <p>At arbejde en dej ved at strække og folde den gentagne gange. Det aktiverer gluten i melet, så dejen bliver
+        elastisk og sammenhængende - vigtigt i fx gærdej.</p>
+    </div>
+
+    <div class="description" id="marmor">
+      <strong>MARMORERET</strong>
+      <p>Et mønster i kager, hvor to (eller flere) farver eller smage slynger sig rundt i hinanden, uden at blive helt
+        blandet - fx i marmorkage.</p>
+    </div>
+
+    <div class="description" id="piske">
+      <strong>PISKE</strong>
+      <p>At røre ingredienser hurtigt og energisk med et piskeris eller elpisker, for at tilføre luft og skabe en let og
+        luftig konsistens - fx ved æggehvider eller flødeskum.</p>
+    </div>
+
+    <div class="description" id="smuldre">
+      <strong>SMULDRE</strong>
+      <p>At gnide smør og mel sammen med fingrene, indtil blandingen ligner grove brødkrummer. Bruges typisk i mørdej
+        eller crumble-topping.</p>
+    </div>
+
+    <div class="description" id="haeve">
+      <strong>HÆVE</strong>
+      <p>En proces hvor dejen vokser i størrelse, typisk pga. gær eller bagepulver, der danner luftbobler. Gør bagværk
+        luftigt og blødt.</p>
+    </div>
+
+    <div class="description" id="afsvaling">
+      <strong>AFSVALING</strong>
+      <p>At lade kagen køle ned efter bagning, så den sætter sig og bliver lettere at håndtere - fx før glasur eller
+        udskæring.</p>
+    </div>
+
+    <div class="description" id="pensle">
+      <strong>PENSLE</strong>
+      <p>At smøre en overflade (fx en bolle eller tærte) med væske, typisk æg, mælk eller smør, for at give farve, glans
+        eller sprødhed ved bagning.</p>
+    </div>
+
+    <div class="description" id="foldning">
+      <strong>FOLDNING</strong>
+      <p>En skånsom teknik, hvor man vender ingredienser sammen(fx aggehvider og dej) med en spartel - så luften bevares
+        i blandingen.</p>
+    </div>
+
+    <div class="description" id="sla">
+      <strong>SLÅ LUFTEN UD</strong>
+      <p>At trykke eller ælte dejen let ned efter første hævning, for at fordele luftboblerne mere jævnt og forberede
+        til næste hævning.</p>
+    </div>
+
+    <div class="description" id="hvedemel">
+      <strong>HVEDEMEL</strong>
+      <p>Et fintmalet mel med høj glutenprocent - velegnet til brød, boller og de fleste kager, fordi det giver en god
+        struktur.</p>
+    </div>
+
+    <div class="description" id="fuldkorn">
+      <strong>FULDKORNSMEL</strong>
+      <p>Mel lavet af hele kornet(skal, kim og kerne)- det indeholder flere fibre og næringsstoffer, men kan give
+        tungere bagværk.</p>
+    </div>
+
+    <div class="description" id="rugmel">
+      <strong>RUGMEL</strong>
+      <p>Mel fra rugkorn. det har en mørkere farve og kraftigere smag end hvedemel. bruges ofte i rugbrød og giver et
+        tættere bagværk.</p>
+    </div>
+  </div>
+
+  <div class="bagetips-tricks">
+    <h1>ÅH NEJ! HJÆLPE MIG</h1>
+    <p>
+      Vi er kede af at høre du er kommet i problemer, men så det godt vi har en bageklinik som står klar til at hjælpe
+      dig!
+    </p>
+  </div>
+
+  <div class="table-wrapper">
+    <table class="bake-table">
+      <thead>
+        <tr>
+          <th>Problem</th>
+          <th>Diagnose</th>
+          <th>Løsning</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>MIN DEJ ER FOR TØR</td>
+          <td>FOR LIDT VÆSKE I DEJEN</td>
+          <td>TILSÆT 1 SPSK MÆLK AD GANGEN</td>
+        </tr>
+        <tr>
+          <td>MIN KAGE FALDT SAMMEN</td>
+          <td>OVNDØREN BLEV ÅBNET FOR TIDLIGT</td>
+          <td>VENT MED AT ÅBNE TIL SIDST I BAGE TIDEN</td>
+        </tr>
+        <tr>
+          <td>MIN DEJ ER FOR VÅD</td>
+          <td>FOR MEGET VÆSKE I FORHOLD TIL MEL</td>
+          <td>TILSÆT 1 SPSK MEL AD GANGEN OG FOLD FORSIGTIGT IND</td>
+        </tr>
+        <tr>
+          <td>MIN DEJ KLISTRER FAST I HÆNDERNE</td>
+          <td>IKKE ÆLTET NOK ELLER FOR VÅD</td>
+          <td>SMØR DINE HÆNDER MED LIDT OLIE ELLER MEL DEM LET</td>
+        </tr>
+        <tr>
+          <td>KAGEN REVNER PÅ TOPPEN</td>
+          <td>OVNEN HAR VÆRET FOR VARM</td>
+          <td>SKRU LIDT NED, OG DÆK EVT. MED BAGEPAPIR</td>
+        </tr>
+        <tr>
+          <td>MINE SMÅKAGER FLYDER FOR MEGET UD</td>
+          <td>FOR VARM DEJ ELLER FOR MEGET SMØR</td>
+          <td>SÆT DEJEN PÅ KØL I 10-15 MIN FØR BAGNING</td>
+        </tr>
+        <tr>
+          <td>MINE CUPCAKES HÆVER SKÆVT</td>
+          <td>OVNEN VAR FOR VARM ELLER UJÆVN</td>
+          <td>DREJ FORMEN HALVVEJS GENNEM BAGNINGEN</td>
+        </tr>
+        <tr>
+          <td>MIN GLASUR ER FOR TYND</td>
+          <td>FOR MEGET VÆSKE</td>
+          <td>TILSÆT FLORMELIS LIDT AD GANGEN OG RØR GODT</td>
+        </tr>
+        <tr>
+          <td>MIN GLASUR ER FOR TYK</td>
+          <td>FOR LIDT VÆSKE</td>
+          <td>TILSÆT 1 TSK VÆSKE AD GANGEN (VAND, MÆLK ELLER CITRON)</td>
+        </tr>
+        <tr>
+          <td>DEJEN HÆVER IKKE</td>
+          <td>GÆR/KAGEPULVER VAR FOR GAMMELT</td>
+          <td>BRUG FRISK HÆVEMIDDEL, OG TJEK HOLDBARHED</td>
+        </tr>
+        <tr>
+          <td>SMÅKAGERNE SMULDRER</td>
+          <td>FOR TØR DEJ ELLER FOR MEGET MEL</td>
+          <td>TILSÆT LIDT VÆSKE ELLER FEDTSTOF OG ÆLT KORT</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="bagetips-tricks">
+    <p>
+      Har du oplevet flere problemer så kontakt os gerne så vi kan få tilføjet dem til vores bageklinik
+    </p>
+    <p>
+      Skriv på vores mail: kopogkrumme@gmail.com
+    </p>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="social-icon">
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a></li>
+        <li class="social-icon__item"><a class="social-icon__link"
+            href="https://www.instagram.com/kopogkrumme?igsh=dmM5bGs4dHE5OTcx">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a></li>
+      </ul>
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
+        <li class="menu__item"><a class="menu__link" href="begynder.html">Begynder</a></li>
+        <li class="menu__item"><a class="menu__link" href="opskifter.html">Opskifter</a></li>
+        <li class="menu__item"><a class="menu__link" href="events.html">Events</a></li>
+        <li class="menu__item"><a class="menu__link" href="omos.html">Om os</a></li>
+
+      </ul>
+      <p>&copy;2025 Gruppe 5 Mul-B | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

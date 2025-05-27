@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- SEO -->
+<title>Kop & Krumme - Nemme bageopskrifter og hyggelige events for begyndere</title>
+<meta name="description" content="Lær at bage med Kop & Krumme - en hyggelig hjemmeside med nemme opskrifter, bageevents og tips til begyndere.">
+<meta name="keywords" content="bage for begyndere, bageopskrifter, nem bagning, bage events, fællesskab, kop og krumme, bagetips, lær at bage">
+<meta name="author" content="Kop & Krumme Team">
+
+  <!--Bootstrap-->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <!--Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!--Total Navbar-->
+  <header class="header">
+    <a href="index.html" class="logo">
+      <img src="img/logo.png" alt="Logo" height="40" />
+    </a>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav class="navbar" id="navLinks">
+      <a href="begynder.html" class="cupcake-link">
+        <div class="cupcake">
+          <img src="img/Cupnotfilled.png" alt="Cupcake" class="cupcake-img" />
+          <span class="cupcake-text">BEGYNDER</span>
+        </div>
+      </a>
+      <a href="opskifter.html" class="cupcake-link">
+        <div class="cupcake">
+          <img src="img/Cupnotfilled.png" alt="Cupcake" class="cupcake-img" />
+          <span class="cupcake-text">OPSKRIFTER</span>
+        </div>
+      </a>
+      <a href="events.html" class="cupcake-link">
+        <div class="cupcake">
+          <img src="img/Cupnotfilled.png" alt="Cupcake" class="cupcake-img" />
+          <span class="cupcake-text">EVENTS</span>
+        </div>
+      </a>
+      <a href="omos.html" class="cupcake-link">
+        <div class="cupcake">
+          <img src="img/Cupnotfilled.png" alt="Cupcake" class="cupcake-img" />
+          <span class="cupcake-text">OM OS</span>
+        </div>
+      </a>
+      <button class="menu-close" onclick="toggleMenu()">✕</button>
+
+    </nav>
+  </header>
+
+  <!--Top section-->
+  <section class="fr-container">
+    <div class="fr-text">
+      <h1>VELKOMMEN TIL KOP & KRUMME</h1>
+      <br>
+      <p>Vi her i Kop&Krumme vil gerne give alle muligheden for at bage på trods af færdigheder.</p>
+      <br>
+      <p>Vi har prøvet at gøre det så nemt som muligt at bage for jer - se gerne vores begynderside med masser tips &
+        tricks og følg med i vores fede events”</p>
+    </div>
+    <div class="fr-image">
+      <img src="img/Frontpic.png" alt="Frontpic">
+    </div>
+  </section>
+
+<section class="fr-centertext">
+  <div class="lined-title">
+    <span>VORES MEST POPULÆR OPSKRIFTER</span>
+  </div>
+</section>
+
+
+  <!--Carousel-->
+  <div class="carousel-wrapper">
+    <button class="nav-btn left" onclick="moveCarousel(-1)">
+      <i class="fa fa-chevron-left"></i>
+    </button>
+
+    <div class="carousel-track" id="carouselTrack">
+      <!-- Group 1 -->
+      <div class="carousel-group">
+        <div class="carousel-card">
+          <a href="bananmuffins.html">
+            <img src="img/Bananmuffin.png" alt="bananmuffin" />
+            <div class="button-wrapper">
+              <button>Se Opskriften</button>
+            </div>
+          </a>
+        </div>
+
+        <div class="carousel-card">
+          <a href="hindbær-browines.html">
+            <img src="img/brownie.png" alt="brownies" />
+            <div class="button-wrapper">
+              <button>Se Opskriften</button>
+            </div>
+          </a>
+        </div>
+
+        <div class="carousel-card">
+          <a href="cookies.html">
+            <img src="img/cookies.png" alt="cookies" />
+            <div class="button-wrapper">
+              <button>Se Opskriften</button>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Group 2 -->
+      <div class="carousel-group">
+        <div class="carousel-card">
+          <a href="drømmekage.html">
+            <img src="img/drommekage.png" alt="drommekage" />
+            <div class="button-wrapper">
+              <button>Se Opskriften</button>
+            </div>
+          </a>
+        </div>
+
+        <div class="carousel-card">
+          <a href="kopkage.html">
+            <img src="img/kopkage.png" alt="kopkage" />
+            <div class="button-wrapper">
+              <button>Se Opskriften</button>
+            </div>
+          </a>
+        </div>
+
+        <div class="carousel-card">
+          <a href="lemon.html">
+            <img src="img/Lemon.png" alt="lemonkage" />
+            <div class="button-wrapper">
+              <button>Se Opskriften</button>
+            </div>
+          </a>  
+        </div>
+      </div>
+    </div>
+
+    <button class="nav-btn right" onclick="moveCarousel(1)">
+      <i class="fa fa-chevron-right"></i>
+    </button>
+  </div>
+
+<section class="fr-centertext">
+  <div class="lined-title">
+    <span>SE VORES KOMMENDE EVENTS</span>
+  </div>
+</section>
+
+
+  <div class="page-wrapper">
+    <div class="paper">
+      <img src="img/Paper-tape.png" alt="Pink paper background" class="background">
+      <div class="paper-content">
+        <div class="text">
+          <h1>Bage i blinde!</h1>
+          <p>Kom og test dit venskab og dine bage evner.</p>
+          <p>Tilmeld dig og en ven og kom og bag blind,
+            og få det bedømt af dommer og måske vind
+            æren i at du kan bage blind!</p>
+          <div class="buttons">
+            <a href="#">Læs mere</a>
+            <a href="#">Tilmeld dig!</a>
+          </div>
+        </div>
+        <div class="image-section">
+          <img src="img/OIP (1).jpg" alt="Muffins">
+          <div class="buttons">
+            <a href="#">Læs mere</a>
+            <a href="#">Tilmeld dig!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="social-icon">
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a></li>
+        <li class="social-icon__item"><a class="social-icon__link"
+            href="https://www.instagram.com/kopogkrumme?igsh=dmM5bGs4dHE5OTcx" alt="kopogkrumme instagram">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a></li>
+      </ul>
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
+        <li class="menu__item"><a class="menu__link" href="begynder.html">Begynder</a></li>
+        <li class="menu__item"><a class="menu__link" href="opskifter.html">Opskifter</a></li>
+        <li class="menu__item"><a class="menu__link" href="events.html">Events</a></li>
+        <li class="menu__item"><a class="menu__link" href="omos.html">Om os</a></li>
+
+      </ul>
+      <p>&copy;2025 Gruppe 5 Mul-B | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

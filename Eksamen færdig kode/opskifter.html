@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     <title>Kop & Krumme opskrifter</title>
+  <meta name="description"
+    content="Lær at bage med Kop & Krumme - en hyggelig hjemmeside med nemme opskrifter, bageevents og tips til begyndere.">
+  <meta name="keywords"
+    content="bage for begyndere, bageopskrifter, nem bagning, bagning, varierende opskrifter, fællesskab, kop og krumme, bagetips, lær at bage">
+  <meta name="author" content="Kop & Krumme Team">
+
+  <!--Bootstrap-->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <!--Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<!--Total Navbar-->
+  <header class="header">
+    <a href="index.html" class="logo">
+      <img src="img/logo.png" alt="Logo" height="40" />
+    </a>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+<nav class="navbar" id="navLinks">
+  <a href="begynder.html" class="cupcake-link">
+    <div class="cupcake">
+      <img src="img/Cupnotfilled.png" alt="Cupcake" />
+      <span class="cupcake-text">Begynder</span>
+    </div>
+  </a>
+  <a href="opskifter.html" class="cupcake-link">
+    <div class="cupcake">
+          <img src="img/Cupnotfilled.png" alt="Cupcake" class="cupcake-img" />
+      <span class="cupcake-text">Opskrifter</span>
+    </div>
+  </a>
+  <a href="events.html" class="cupcake-link">
+    <div class="cupcake">
+      <img src="img/Cupnotfilled.png" alt="Cupcake" />
+      <span class="cupcake-text">Events</span>
+    </div>
+  </a>
+  <a href="omos.html" class="cupcake-link">
+    <div class="cupcake">
+      <img src="img/Cupnotfilled.png" alt="Cupcake" />
+      <span class="cupcake-text">Om os</span>
+    </div>
+  </a>
+  <button class="menu-close" onclick="toggleMenu()">✕</button>
+  
+</nav>
+  </header>
+
+<div class="title">Opskifter</div>
+
+<!-- Sorting Filter Section -->
+<div class="tag-buttons">
+  <button class="tag-button" data-tag="Populær">Populær</button>
+  <button class="tag-button" data-tag="Nem">Nem</button>
+  <button class="tag-button" data-tag="Få ingredienser">Få ingredienser</button>
+  <button class="tag-button" data-tag="Tidskrævende">Tidskrævende</button>
+  <button class="tag-button" data-tag="Budget">Budget</button>
+</div>
+
+<!-- Recipe Cards Section -->
+<div class="content">
+
+  <div class="card" data-tags="Budget,Nem">
+    <h1>Drømmekage</h1>
+    <img src="img/Drømmekage/drommekage.png" alt="Drømmekage">
+    <div class="tags">
+      <span>Budget</span>
+      <span>Nem</span>
+    </div>
+    <p>Luftig drømmekage med sød kokos-topping - nem, hurtig og perfekt til hverdag og hygge.</p>
+    <button><a href="drømmekage.html">Se Opskriften</a></button>
+  </div>
+
+    <div class="card" data-tags="Budget,Nem,Få ingredienser">
+    <h1>Kop Kage</h1>
+    <img src="img/kopkage/kopkage.png" alt="kopkage">
+    <div class="tags">
+      <span>Budget</span>
+      <span>Nem</span>
+      <span>Få ingredienser</span>
+    </div>
+    <p>En hurtig og lækker kopkage, der laves på få minutter i mikroovnen. Perfekt når du har lyst til noget sødt - lige nu og her.</p>
+    <button><a href="kopkage.html">Se Opskriften</a></button>
+  </div>
+
+    <div class="card" data-tags="Populær,Nem,Få ingredienser">
+    <h1>Bananmuffins</h1>
+    <img src="img/bananmuffin/Bananmuffin.png" alt="Bananmuffins">
+    <div class="tags">
+      <span>Populær</span>
+      <span>Nem</span>
+      <span>Få ingredienser</span>
+    </div>
+    <p>Disse bananmuffins er nemme at bage og smager skønt. De er luftige, saftige og perfekte som en lækker snack.</p>
+    <button><a href="bananmuffins.html">Se Opskriften</a></button>
+  </div>
+
+    <div class="card" data-tags="Populær,Nem,Få ingredienser">
+    <h1>Fudgy Hindbær Browines</h1>
+    <img src="img/Browine/brownie.png" alt="Browines">
+    <div class="tags">
+      <span>Populær</span>
+      <span>Nem</span>
+      <span>Få ingredienser</span>
+    </div>
+    <p>Fudgy hindbær brownies med masser af chokolade og et frisk twist fra hindbær. Bløde, intense og helt uimodståelige!</p>
+    <button><a href="hindbær-browines.html">Se Opskriften</a></button>
+  </div>
+
+    <div class="card" data-tags="Populær,Nem,Tidskrævende">
+    <h1>Cookies</h1>
+    <img src="img/Cookies/cookies.png" alt="Cookies">
+    <div class="tags">
+      <span>Populær</span>
+      <span>Nem</span>
+      <span>Tidskrævende</span>
+    </div>
+    <p>Disse lækre cookies er nemme at bage og smager fantastisk. De har en sprød overflade og en blød, lækker midte - og de er allerbedst, når de spises lune.</p>
+    <button><a href="cookies.html">Se Opskriften</a></button>
+  </div>
+
+  <div class="card" data-tags="Budget,Nem">
+    <h1>Citron Browines</h1>
+    <img src="img/Lemon Cake/Lemon.png" alt="Lemon Cake">
+    <div class="tags">
+      <span>Budget</span>
+      <span>Nem</span>
+    </div>
+    <p>Friske og syrlige citron brownies med en blød midte og sød glasur på toppen. Perfekte til dig, der elsker en frisk twist i kagen.</p>
+    <button><a href="lemon.html">Se Opskriften</a></button>
+  </div>
+</div>
+
+   <footer>
+    <div class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/kopogkrumme?igsh=dmM5bGs4dHE5OTcx">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="begynder.html">Begynder</a></li>
+      <li class="menu__item"><a class="menu__link" href="opskifter.html">Opskifter</a></li>
+      <li class="menu__item"><a class="menu__link" href="events.html">Events</a></li>
+      <li class="menu__item"><a class="menu__link" href="omos.html">Om os</a></li>
+
+    </ul>
+    <p>&copy;2025 Gruppe 5 Mul-B | All Rights Reserved</p>
+    </div>
+  </footer>
+    
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+</html>
